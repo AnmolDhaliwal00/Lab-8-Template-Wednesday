@@ -77,4 +77,15 @@ public class CityList {
     public int countCities() {
         return cities.size();
     }
+
+    public int getIndex(City cityTest) {
+        for(City city : cities) {
+            if (city.getCityName().equals(cityTest.getCityName())) {
+                if (city.getProvinceName().equals(cityTest.getProvinceName())){
+                    return cities.indexOf(city);
+                }
+            }
+        }
+        return -1;
+    }
 }
